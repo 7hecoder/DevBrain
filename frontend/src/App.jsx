@@ -107,7 +107,7 @@ const tools = [
 ];
 
 async function apiRequest(path, options = {}) {
-  const response = await fetch(`/api${path}`, options);
+  const response = await fetch(`${import.meta.env.VITE_API_BASE_URL || "/api"}${path}`, options);
   const contentType = response.headers.get("content-type") || "";
 
   let data;
