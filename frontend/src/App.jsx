@@ -17,6 +17,8 @@ import {
   LoaderCircle,
   AlertCircle,
   Terminal,
+  Users,
+  ExternalLink,
   Zap,
   Menu,
   X,
@@ -769,17 +771,6 @@ function App() {
             </nav>
           </div>
 
-          <div className="mt-auto p-5">
-            <div className="rounded-xl border border-slate-800 bg-slate-900/50 p-4">
-              <div className="flex items-center gap-2 text-xs font-semibold text-slate-300">
-                <span className="h-2 w-2 rounded-full bg-emerald-400" />
-                API workspace
-              </div>
-              <p className="mt-2 text-xs leading-5 text-slate-500">
-                Tools are powered by your FastAPI backend.
-              </p>
-            </div>
-          </div>
         </aside>
 
         <main className="min-w-0 flex-1">
@@ -799,10 +790,16 @@ function App() {
                 </p>
               </div>
             </div>
-            <div className="flex items-center gap-2 rounded-full border border-slate-800 bg-slate-900/60 px-3 py-2">
-              <span className="h-2 w-2 rounded-full bg-emerald-400" />
-              <span className="text-xs text-slate-400">Local development</span>
-            </div>
+            <a
+              href="https://x.com/buildwithaamir"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-slate-800 bg-slate-900/60 px-3 py-2 text-xs font-medium text-slate-300 transition hover:border-emerald-400/40 hover:text-white"
+            >
+              <Users size={14} />
+              <span>Connect</span>
+              <ExternalLink size={13} />
+            </a>
           </header>
 
           <div className="mx-auto max-w-5xl px-5 py-8 sm:px-8 sm:py-10">
@@ -901,7 +898,17 @@ function App() {
 
             <footer className="mt-6 flex flex-col gap-2 text-xs text-slate-600 sm:flex-row sm:items-center sm:justify-between">
               <span>DevBrain · Developer utilities workspace</span>
-              <span>React + Vite · FastAPI</span>
+              <span>
+                Built by{" "}
+                <a
+                  href="https://x.com/buildwithaamir"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium text-slate-400 transition hover:text-emerald-300"
+                >
+                  Aamir Khan
+                </a>
+              </span>
             </footer>
           </div>
         </main>
